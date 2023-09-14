@@ -183,6 +183,7 @@ func (o *ociCollector) getTagsAndFetch(ctx context.Context, repo string, tags []
 // Note: fetchOCIArtifacts currently does not re-check if a new sbom or attestation get reuploaded during polling with the same image digest.
 // A workaround for this would be to run the collector again with a specific tag without polling and ingest like normal
 func (o *ociCollector) fetchOCIArtifacts(ctx context.Context, repo string, rc *regclient.RegClient, image ref.Ref, docChannel chan<- *processor.Document) error {
+	log := logging.FromContext(ctx)
 	// attempt to request only the headers, avoids Docker Hub rate limits
 	m, err := rc.ManifestHead(ctx, image)
 	if err != nil {
@@ -233,8 +234,10 @@ func (o *ociCollector) fetchOCIArtifacts(ctx context.Context, repo string, rc *r
 	if err != nil {
 		return err
 	}
+	log.Infof("got %d referrers for %s", len(referrerList.Descriptors), image.Digest)
 	for _, referrerDesc := range referrerList.Descriptors {
 		imageTag := fmt.Sprintf("%v@%v", repo, referrerDesc.Digest.String())
+		log.Infof("fetching %s", imageTag)
 		err = fetchOCIArtifactBlobs(ctx, rc, imageTag, docChannel)
 		if err != nil {
 			return err
