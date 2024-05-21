@@ -487,7 +487,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e36",
 				  "fileTypes": [
 					"TEXT"
@@ -516,7 +516,7 @@ func Test_spdxParser(t *testing.T) {
 				IsDependency: []assembler.IsDependencyIngest{
 					{
 						Pkg:             pUrlToPkgDiscardError("pkg:guac/spdx/testsbom"),
-						DepPkg:          pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63?filename=./include-file"),
+						DepPkg:          pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63#include-file"),
 						DepPkgMatchFlag: generated.MatchFlags{Pkg: generated.PkgMatchTypeAllVersions},
 						IsDependency: &generated.IsDependencyInputSpec{
 							DependencyType: generated.DependencyTypeUnknown,
@@ -526,7 +526,7 @@ func Test_spdxParser(t *testing.T) {
 				},
 				IsOccurrence: []assembler.IsOccurrenceIngest{
 					{
-						Pkg: pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63?filename=./include-file"),
+						Pkg: pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63#include-file"),
 						Artifact: &generated.ArtifactInputSpec{
 							Algorithm: "sha1",
 							Digest:    "ba1c68d88439599dcca7594d610030a19eda4f63",
@@ -600,7 +600,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e36",
 				  "fileTypes": [
 					"TEXT"
@@ -615,7 +615,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e36",
 				  "fileTypes": [
 					"TEXT"
@@ -630,7 +630,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e36",
 				  "fileTypes": [
 					"TEXT"
@@ -645,7 +645,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e36",
 				  "fileTypes": [
 					"TEXT"
@@ -660,7 +660,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 								{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e37",
 				  "fileTypes": [
 					"TEXT"
@@ -676,7 +676,7 @@ func Test_spdxParser(t *testing.T) {
 				}
 				,
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e38",
 				  "fileTypes": [
 					"TEXT"
@@ -691,7 +691,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e39",
 				  "fileTypes": [
 					"TEXT"
@@ -706,7 +706,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e39",
 				  "fileTypes": [
 					"TEXT"
@@ -721,7 +721,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e39",
 				  "fileTypes": [
 					"TEXT"
@@ -736,7 +736,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e39",
 				  "fileTypes": [
 					"TEXT"
@@ -751,7 +751,7 @@ func Test_spdxParser(t *testing.T) {
 				  "copyrightText": ""
 				},
 				{
-				  "fileName": "./include-file",
+				  "fileName": "include-file",
 				  "SPDXID": "SPDXRef-aef1c9f4f2277e39",
 				  "fileTypes": [
 					"TEXT"
@@ -779,7 +779,7 @@ func Test_spdxParser(t *testing.T) {
 				IsDependency: []assembler.IsDependencyIngest{
 					{
 						Pkg:             pUrlToPkgDiscardError("pkg:guac/spdx/testsbom"),
-						DepPkg:          pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63?filename=./include-file"),
+						DepPkg:          pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63#include-file"),
 						DepPkgMatchFlag: generated.MatchFlags{Pkg: generated.PkgMatchTypeAllVersions},
 						IsDependency: &generated.IsDependencyInputSpec{
 							DependencyType: generated.DependencyTypeUnknown,
@@ -789,7 +789,7 @@ func Test_spdxParser(t *testing.T) {
 				},
 				IsOccurrence: []assembler.IsOccurrenceIngest{
 					{
-						Pkg: pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63?filename=./include-file"),
+						Pkg: pUrlToPkgDiscardError("pkg:guac/files/sha1:ba1c68d88439599dcca7594d610030a19eda4f63#include-file"),
 						Artifact: &generated.ArtifactInputSpec{
 							Algorithm: "sha1",
 							Digest:    "ba1c68d88439599dcca7594d610030a19eda4f63",
